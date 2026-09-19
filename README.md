@@ -105,3 +105,8 @@ npm run dev
 - [ ] **Pluggable LLM Integration:** Seamless `BaseAgent` swapping for local models via Ollama or cloud-tier APIs (Google Gemini).
 - [ ] **Token-Aware Event Streams:** Token-by-token live streaming directly through the WebSocket pipeline.
 - [ ] **AST-Based Code Validation:** Python Abstract Syntax Tree parsing and automated error-feedback loops for self-healing code generation.
+
+---
+
+## 📄 License
+- Distributed under the MIT License.
