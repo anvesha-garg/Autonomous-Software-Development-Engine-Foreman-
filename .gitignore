@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.db
+.env
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# OS Specific
+.DS_Store
+Thumbs.db

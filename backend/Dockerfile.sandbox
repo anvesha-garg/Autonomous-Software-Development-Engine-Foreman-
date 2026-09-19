@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+WORKDIR /workspace
+
+# Install common testing utilities and dependencies
+RUN pip install --no-cache-dir pytest pytest-json-report requests pydantic
+
+# Non-root user for security
+RUN useradd -m sandbox && chown -R sandbox:sandbox /workspace
+USER sandbox
+
+CMD ["tail", "-f", "/dev/null"]
