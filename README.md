@@ -10,7 +10,7 @@
 
 ## 🚀 About The Project
 
-**Foreman** is a sophisticated task orchestration engine built to simulate autonomous software engineering workflows. Instead of standard sequential scripts, Foreman treats complex coding tasks as a **Directed Acyclic Graph (DAG)**—managing strict node dependencies (`PENDING`, `RUNNING`, `PASSED`), executing operations asynchronously, and streaming real-time status updates, logs, and file structures directly to a modern React dashboard via **WebSockets**.
+**Foreman** is a sophisticated task orchestration engine built to simulate autonomous software engineering workflows. Instead of standard sequential scripts, Foreman treats complex coding tasks as a **Directed Acyclic Graph (DAG)** — managing strict node dependencies (`PENDING`, `RUNNING`, `PASSED`), executing operations asynchronously, and streaming real-time status updates, logs, and file structures directly to a modern React dashboard via **WebSockets**.
 
 Whether used as a foundation for local code-generation models or as a standalone pipeline engine, Foreman highlights modern full-stack systems engineering, non-blocking concurrency, and clean state synchronization.
 
@@ -27,12 +27,12 @@ Whether used as a foundation for local code-generation models or as a standalone
 
 ## 🛠️ Tech Stack
 
-### **Backend**
+### Backend
 * **Framework:** Python, FastAPI, Uvicorn (ASGI)
 * **Validation & Concurrency:** Pydantic, WebSockets, AsyncIO
 * **Database & Storage:** SQLite, SQLAlchemy ORM
 
-### **Frontend**
+### Frontend
 * **Framework:** React, TypeScript, Vite
 * **Styling:** Tailwind CSS, Lucide Icons
 * **Real-Time Hook:** Custom WebSocket state synchronization layer
@@ -50,8 +50,8 @@ foreman/
 │   │   ├── models/      # Pydantic schemas & data models
 │   │   ├── routes/      # REST API endpoints & project management
 │   │   └── main.py      # FastAPI application entry point
-│   ├── Dockerfile.sandbox # Containerization template for isolated runs
-│   └── requirements.txt # Python dependencies
+│   ├── Dockerfile.sandbox  # Containerization template for isolated runs
+│   └── requirements.txt    # Python dependencies
 │
 └── frontend/
     └── src/
@@ -59,32 +59,49 @@ foreman/
         ├── hooks/       # Custom useWebSocket state hook
         ├── App.tsx      # Root dashboard layout
         └── types.ts     # TypeScript type interfaces
+```
 
-⚙️ Getting Started Locally
-1. Clone the Repository
+---
 
-git clone [https://github.com/YOUR-USERNAME/foreman.git](https://github.com/YOUR-USERNAME/foreman.git)
+## ⚙️ Getting Started Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/foreman.git
 cd foreman
+```
 
-2. Set Up the Backend
-Bash
+### 2. Set Up the Backend
+
+```bash
 cd backend
 python -m venv venv
-# On Windows run: venv\Scripts\activate
-# On macOS/Linux run: source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+
+# On macOS/Linux:
+source venv/bin/activate
 
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-3. Set Up the Frontend
+```
+
+### 3. Set Up the Frontend
+
 Open a new terminal window:
 
-Bash
+```bash
 cd frontend
 npm install
 npm run dev
-🗺️ Future Roadmap
-[ ] Pluggable LLM Integration: Seamless BaseAgent swapping for local models via Ollama or cloud-tier APIs (Google Gemini).
+```
 
-[ ] Token-Aware Event Streams: Token-by-token live streaming directly through the WebSocket pipeline.
+---
 
-[ ] AST-Based Code Validation: Python Abstract Syntax Tree parsing and automated error-feedback loops for self-healing code generation.
+## 🗺️ Future Roadmap
+
+- [ ] **Pluggable LLM Integration:** Seamless `BaseAgent` swapping for local models via Ollama or cloud-tier APIs (Google Gemini).
+- [ ] **Token-Aware Event Streams:** Token-by-token live streaming directly through the WebSocket pipeline.
+- [ ] **AST-Based Code Validation:** Python Abstract Syntax Tree parsing and automated error-feedback loops for self-healing code generation.
